@@ -23,7 +23,6 @@ public class Exercise23 {
         map.put("police", new PoliceOfficer("Jake", "Peralta", "B-99"));
         map.put("doctor", new Doctor("Gregory", "House", "Nefrología e infectología"));
         //y devolver el mapa creado.
-
         return map;
     }
 
@@ -32,9 +31,10 @@ public class Exercise23 {
         map.put(key, value);
 
         return value;// y devolver el objeto que se añadió como value de la entry.
-
     }
 
+
+    //Crear un metodo printMapValues() que reciba un mapa y recorra cada entrada del mismo, imprimiendo los detalles de cada value
     public static void printMapValues(Map<String, Person> map) {
         for (Map.Entry<String, Person> entry : map.entrySet()) {
             System.out.println("Clave " + entry.getKey() + ", ");
