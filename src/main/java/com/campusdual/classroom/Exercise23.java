@@ -5,10 +5,18 @@ import java.util.Map;
 
 public class Exercise23 {
 
+    /*
+  CRITERIOS PARA ESCOGER ENTRE ALTERNATIVAS
+
+  EFICIENCIA .- ¿Qué opción consume menos recursos ?
+  LEGIBILIDAD .- ¿Qué opción tiene código más legible y conciso?
+  MANEJO DE ERRORES .- ¿Qué opción es menos susceptible de provocar errores?
+  FLEXIBILIDAD .- ¿Qué opción aporta más opciones?
+*/
+
     public static void main(String[] args) {
         Map<String, Person> map = createHashMap();
-        Person newPolice = new PoliceOfficer("Charles", "Boyle", "B-99");
-        addMapValue(map, "police", newPolice);
+        addMapValue(map, "police", new PoliceOfficer("Charles", "Boyle", "B-99"));
         printMapValues(map);
     }
 
@@ -30,7 +38,7 @@ public class Exercise23 {
         //Añadir una entrada más al mapa en el metodo addMapValue()
         map.put(key, value);
 
-        return value;// y devolver el objeto que se añadió como value de la entry.
+        return map.get(key);
     }
 
 
@@ -42,6 +50,11 @@ public class Exercise23 {
         }
 
 
+        //Streams en java
+
+        //map.forEach((key, value)-> {
+        //  value.getDetails();
+        //});
     }
 
 }
